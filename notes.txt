@@ -1,0 +1,12 @@
+Initial test configs: 
+Model size - train8-dem & train8-rep (16k) + test4-dem & test4-rep (16k) + train8-unsup (16k)
+Epochs - 10
+Logistic Regression - 66% accuracy
+
+Initial clustering tests:
+Same model as above
+Test data - test5-unsup
+Accuracy - 50.82%
+Concerns - unbalanced cluster sizes
+
+Possible paths: kn-means
