@@ -66,6 +66,6 @@ python classify.py -large
 
 ## Acknowledgments
 
-* Zhi Xing's project on detecting Twitter sentiments that I based some of my scripts on: github.com/zxing01/deep-learning-twitter-sentiment
+* Zhi Xing's project on detecting Twitter sentiments that I based some of my scripts on: https://github.com/zxing01/deep-learning-twitter-sentiment
 * Linan Qiu's tutorial on doc2vec that I closely followed: https://github.com/linanqiu/word2vec-sentiments
 * The paper that introduced the doc2vec approach, referred to as parargraph vectors back then: https://arxiv.org/pdf/1405.4053.pdf
