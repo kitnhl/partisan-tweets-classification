@@ -1,4 +1,4 @@
-# Comparing Non-Bayesian Partisanship Classification Approaches
+# Comparing Partisanship Classification Approaches
 
 This project uses the doc2vec approach to vectorize politician's tweets and then trains these on common supervised classifiers to categorize tweets into democratic vs republican. I also used unsupervised clustering too see how these clusters fare in splitting the tweets between partisan lines. As for the supervised classifiers, the ones tested are logistic regression, k  nearest neighbors,random forests, and support vector machine.
 
@@ -27,64 +27,45 @@ python csv2partisan_train8.py
 python csv2partisan_test4.py
 ```
 
-And repeat
+### Tweet Vectorizing/Building the Doc2Vec Model
+
+The code provided can build both a small and large doc2vec model as described in the paper, but in the interest of time, I highly recommend to only build the small model, which should only take a couple minutes (5-10).
 
 ```
-until finished
+# To build the small model, execute:
+python vectorize.py
+
+# If you really want to test the large model, run:
+python vectorize.py -large
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Running the Experiments
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+To run all the supervised classification algorithms and see and compare their accuracies, execute:
 
 ```
-Give an example
+# If you have built a small model,
+python classify.py
+
+# If you have a large model,
+python classify.py -large
 ```
 
-### And coding style tests
 
-Explain what these tests test and why
-
+To run all the unsupervised clustering algorithms and compare their accuracies, run:
 ```
-Give an example
+python cluster.py
+
+# or...
+python classify.py -large
 ```
 
-## Deployment
+## Author
 
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+**Kit (Hong-Long Nguyen)**
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Zhi Xing's project on detecting Twitter sentiments that I based some of my scripts on: github.com/zxing01/deep-learning-twitter-sentiment
+* Linan Qiu's tutorial on doc2vec that I closely followed: https://github.com/linanqiu/word2vec-sentiments
+* The paper that introduced the doc2vec approach, referred to as parargraph vectors back then: https://arxiv.org/pdf/1405.4053.pdf
