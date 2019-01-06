@@ -1,6 +1,8 @@
 # Comparing Partisanship Classification Approaches
 
-This project uses the doc2vec approach to vectorize politician's tweets and then trains these on common supervised classifiers to categorize tweets into democratic vs republican. I also used unsupervised clustering too see how these clusters fare in splitting the tweets between partisan lines. As for the supervised classifiers, the ones tested are logistic regression, k  nearest neighbors,random forests, and support vector machine.
+This project uses the doc2vec approach to vectorize politician's tweets and then trains these on common supervised classifiers to categorize tweets into democratic vs republican. I also used unsupervised clustering too see how these clusters fare in splitting the tweets between partisan lines. As for the supervised classifiers, the ones tested are logistic regression, k-nearest neighbors, random forests, and support vector machine.
+
+This project is part of a larger effort to analyze whether political partisan bias can be categorized and/or reproduced by existing AI methods. The resulting paper, titled "Analyzing Partisanship in Tweets Using Classification, Clustering, and Text Generation," can be found here [analyzing_partisanship_in_tweets-paper.pdf](analyzing_partisanship_in_tweets-paper.pdf)
 
 ## Getting Started
 
